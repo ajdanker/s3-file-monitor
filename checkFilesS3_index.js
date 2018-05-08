@@ -20,7 +20,7 @@ Date.prototype.yyyymmdd_nodash = function() {
   return [this.getFullYear(),
           (mm>9 ? '' : '0') + mm,
           (dd>9 ? '' : '0') + dd
-         ].join('-')
+         ].join('')
 }
 
 Array.prototype.isEmpty = function() {
