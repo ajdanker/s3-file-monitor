@@ -94,7 +94,7 @@ function ace () {
 //  - missingFiles - array of slack msg attachments
   function createMissingFileMessage(missingFiles) {
 
-    var slackMessage = new Object()
+    var slackMessage = {}
 
     slackMessage.channel = SLACK_CHANNEL_TO_POST
     slackMessage.text = "Third Party Logs - File Monitor Alert for " + checkDateDash + "\n"
@@ -124,8 +124,8 @@ function ace () {
 //  - receivedFiles - array of strings (file names for the received files)
   function createMissingFileMessageAll(missingFiles, receivedFiles) {
 
-    var slackMessage = new Object()
-    var rfAttachment = new Object()
+    var slackMessage = {}
+    var rfAttachment = {}
 
     slackMessage.channel = SLACK_CHANNEL_TO_POST
     slackMessage.text = "Third Party Logs - File Monitor Alert\n"
@@ -168,7 +168,7 @@ function getFile (params) {
     if (err) {
       reject(err);
       // file does not exist
-      var attachment = new Object()
+      var attachment = {}
       attachment.text = params["Key"]
       attachment.color = "#FF0000"
       attachment.title = "File Missing!"
